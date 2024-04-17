@@ -1,0 +1,51 @@
+﻿ <div class="text-center">
+    <h1 class="display-4"> Customer Deatils Page </h1>
+</div>
+
+<table class="table">
+             <thead>
+                 <tr> <td>Custumer Data: </td></tr>
+                
+             </thead>
+             <tbody>
+                 <tr>
+                     
+                     <td><img height="33" src="images/Logo.jpg" alt="profile image " />
+                     Custoumer 1</td>
+                     <td>
+                     <button type="button" class="btn btn-outline-secondary">Update Info </button>
+                     </td>
+
+                 </tr>
+
+                 <tr>
+
+                      <td><img height="33" src="images/Logo.jpg" alt="profile image " />
+                      Custoumer 2 </td>
+                      <td>
+                      <button type="button" class="btn btn-outline-secondary">Update Info </button>
+                      </td>
+
+                </tr>
+
+                 <tr>
+
+                     <td><img height="33" src="images/Logo.jpg" alt="profile image " />
+                     Custoumer 3</td>
+                     <td><button type="button" class="btn btn-outline-secondary">Update Info </button></td>
+
+
+                 </tr>
+                 
+             </tbody>
+         </table>
+
+
+
+
+         @model List<Customer>
+@foreach(var c in Model)
+{
+    <p><a asp-action="Details" asp-id"></a>@c.Name (@c.Email)</p>
+    <p><a href ="Details/c.id"></a></p>
+}

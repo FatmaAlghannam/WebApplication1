@@ -1,0 +1,57 @@
+﻿<div class="text-center">
+    <h1 class="display-4"> Empolyee Deatils Page </h1>
+</div>
+
+<table class="table">
+    <thead>
+        <tr> <td>Empolyee Data: </td></tr>
+
+    </thead>
+    <tbody>
+        <tr>
+
+            <td>
+                <img height="33" src="images/Logo.jpg" alt="profile image " />
+                Employee 1
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-secondary">Update Info </button>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <img height="33" src="images/Logo.jpg" alt="profile image " />
+                Employee 2
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-secondary">Update Info </button>
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td>
+                <img height="33" src="images/Logo.jpg" alt="profile image " />
+                Employee 3
+            </td>
+            <td><button type="button" class="btn btn-outline-secondary">Update Info </button></td>
+
+
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+         @model List<Employee>
+@foreach (var e in Model)
+{
+    <p><a asp-action="Details" asp-route-id="@e.EmployeeId">@e.FirstName (@e.Email)</a></p>
+    <p><a href="Details/e.id"></a></p>
+}
