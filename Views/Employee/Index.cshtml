@@ -1,4 +1,12 @@
-﻿<div class="text-center">
+﻿@model List<Employee>
+
+
+
+
+
+
+
+<div class="text-center">
     <h1 class="display-4"> Empolyee Deatils Page </h1>
 </div>
 
@@ -14,10 +22,13 @@
                 <img height="33" src="images/Logo.jpg" alt="profile image " />
                 Employee 1
             </td>
+
             <td>
+                <a class=" btn btn-primary" href="/Employee/Register"<Add New 
+
                 <button type="button" class="btn btn-outline-secondary">Update Info </button>
             </td>
-
+            </a>
         </tr>
 
         <tr>
@@ -27,8 +38,12 @@
                 Employee 2
             </td>
             <td>
+                <a class=" btn btn-primary" href="/Employee/Register"<Add New
+
                 <button type="button" class="btn btn-outline-secondary">Update Info </button>
             </td>
+            </a>
+
 
         </tr>
 
@@ -38,8 +53,12 @@
                 <img height="33" src="images/Logo.jpg" alt="profile image " />
                 Employee 3
             </td>
-            <td><button type="button" class="btn btn-outline-secondary">Update Info </button></td>
+            <td>
+                <a class=" btn btn-primary" href="/Employee/Register"<Add New
 
+                <button type="button" class="btn btn-outline-secondary">Update Info </button></td>
+
+            </a>
 
         </tr>
 
@@ -49,9 +68,19 @@
 
 
 
-         @model List<Employee>
-@foreach (var e in Model)
+
+
+@* @model List<Employee>
+
+ @foreach (var e in Model)
 {
     <p><a asp-action="Details" asp-route-id="@e.EmployeeId">@e.FirstName (@e.Email)</a></p>
     <p><a href="Details/e.id"></a></p>
+}
+ *@
+
+
+@foreach (var e in Model)
+{
+    <p><a href="/Employee/Details/@e.EmployeeId"> @e.FirstName</a></p>
 }

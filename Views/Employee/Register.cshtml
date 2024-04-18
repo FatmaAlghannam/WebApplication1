@@ -1,0 +1,26 @@
+﻿@*
+<h1>Add new Employee</h1>
+@model AddEmployeeForm
+
+ <form></form>
+ 
+ @using (Html.BeginForm("Register", "Employee", FormMethod.Post)) ;
+{
+     <label>Name:</label>
+    <input type="text" name="Name" />
+
+    <label>Email:</label>
+    <input type="Email" name="Email" /> 
+
+    @Html.EditorForModel();
+    <button type ="Submit" class="btn btn-success">Add</button>
+
+}
+*@
+
+@model AddEmployeeform
+@using (Html.BeginForm("Add", "Employee", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <button class="btn btn-primary" type="submit">Add</button>
+}
